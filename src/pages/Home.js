@@ -1,9 +1,16 @@
 import React from "react";
+import "./Home.css";
+
 
 
 export default function Level() {
     return (
+        <div className="Level">
+            <div className="columns">
+                <div className="title is-size-1">Crea clases inolvidables en un par de clicks</div>
+        </div>
         <div className="columns">
+            
             <div className="column">
                 <div className="card">
                     <div className="card-image">
@@ -53,5 +60,9 @@ export default function Level() {
                 </div>
             </div>     
         </div>
+            
+        </div>
+
+        
     );
 }

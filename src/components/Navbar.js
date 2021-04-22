@@ -1,6 +1,8 @@
-import React from "react";
+import React, { useState } from "react";
+import { NavLink } from "react-router-dom";
 
 export default function Navbar() {
+  const [isOpen, setOpen] = useState(false);
   return (
 <nav className="navbar" role="navigation" aria-label="main navigation">
   <div className="navbar-brand">
@@ -8,22 +10,30 @@ export default function Navbar() {
       <img src="https://bulma.io/images/bulma-logo.png" width="112" height="28" alt="logo" />
     </a>
 
-    <a href="/" role="button" className="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+    <a href="/" role="button"
+            className={`navbar-burger burger ${isOpen && "is-active"}`}
+            aria-label="menu"
+            aria-expanded="false"
+            onClick={() => setOpen(!isOpen)}>
       <span aria-hidden="true"></span>
       <span aria-hidden="true"></span>
       <span aria-hidden="true"></span>
     </a>
   </div>
 
-  <div id="navbarBasicExample" className="navbar-menu">
-    <div className="navbar-start">
-      <a href="/" className="navbar-item">
-        Inicio
-      </a>
+  <div className={`navbar-menu ${isOpen && "is-active"}`}>
+          <div className="navbar-start">
+            <NavLink className="navbar-item" activeClassName="is-active" to="/">
+              Home
+            </NavLink>
 
-      <a href="/" className="navbar-item">
-        Casos de Exito
-      </a>
+            <NavLink
+              className="navbar-item"
+              activeClassName="is-active"
+              to="/successstories"
+            >
+              Casos de Exito
+            </NavLink>
 
       <div className="navbar-item has-dropdown is-hoverable">
         <a href="/" className="navbar-link">
@@ -31,16 +41,28 @@ export default function Navbar() {
         </a>
 
         <div className="navbar-dropdown">
-          <a href="/" className="navbar-item">
-            Equipo
-          </a>
-          <a href="/" className="navbar-item">
-            Newsletter
-          </a>
+          <NavLink
+              className="navbar-item"
+              activeClassName="is-active"
+              to="/team"
+            >
+              Team
+            </NavLink>
+          <NavLink
+              className="navbar-item"
+              activeClassName="is-active"
+              to="/newsletter"
+            >
+              Newsletter
+            </NavLink>
           <hr className="navbar-divider" />
-          <a href="/" className="navbar-item">
-            Contacto
-          </a>
+          <NavLink
+              className="navbar-item"
+              activeClassName="is-active"
+              to="/contactus"
+            >
+              Contactanos
+            </NavLink>
         </div>
       </div>
     </div>
