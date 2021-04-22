@@ -1,17 +1,26 @@
 
 import './App.css';
-import Test from "./test";
+import Navbar from "./components/Navbar";
+// import Header from "./components/Header";
+import Level from "./components/Level";
+
 
 function App() {
-  return (
+    return (
     <div className="App">
-     
-      <button className="button is-primary is-rounded"> bulma </button>
-      <Test />
-        
-      
+        <div className="container">
+          
+          <Navbar />
+          <div>
+            <a href="./components/Units" alt="link">link</a>  
+            
+          </div>
+          
+        <Level />
+        </div>
     </div>
   );
-}
+
+  }
 
 export default App;
