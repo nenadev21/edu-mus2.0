@@ -1,5 +1,6 @@
 import React from "react";
 import "./Home.css";
+import { NavLink } from "react-router-dom";
 
 
 
@@ -18,9 +19,12 @@ export default function Level() {
                             <img src="https://images.pexels.com/photos/1490844/pexels-photo-1490844.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="child" />
                         </figure>
                     </div>
-                    <footer class="card-footer">
-                            <a href="/" class="card-footer-item">1ro Basico</a>    
-            </footer>
+                        <footer class="card-footer">
+                            <NavLink className="navbar-item" activeClassName="is-active" to="/units">
+                                1ro Basico
+                            </NavLink>
+                            {/* <a href="/" class="card-footer-item">1ro Basico</a>     */}
+                        </footer>
                 </div>
             </div>
             <div className="column">

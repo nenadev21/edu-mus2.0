@@ -24,7 +24,7 @@ export default function Navbar() {
   <div className={`navbar-menu ${isOpen && "is-active"}`}>
           <div className="navbar-start">
             <NavLink className="navbar-item" activeClassName="is-active" to="/">
-              Home
+              Inicio
             </NavLink>
 
             <NavLink
@@ -46,7 +46,7 @@ export default function Navbar() {
               activeClassName="is-active"
               to="/team"
             >
-              Team
+              Equipo
             </NavLink>
           <NavLink
               className="navbar-item"
