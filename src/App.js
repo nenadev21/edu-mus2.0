@@ -4,10 +4,10 @@ import Newsletter from "./pages/Newsletter";
 import SuccessStories from "./pages/SuccessStories";
 import Home from "./pages/Home";
 import Team from "./pages/Team";
-import Units from "./pages/Units";
-
-
+import UnitOverview from "./components/UnitOverview";
 import { BrowserRouter, Route, Switch } from "react-router-dom";
+
+
 
 
 
@@ -37,14 +37,12 @@ function App() {
             <ContactUs />
         </Route>
         </Switch>
-        <Route path="/units">
-            <Units />
+        <Route path="/unit-overview">
+            <UnitOverview />
         </Route>
-        </div>
+      </div>
     </BrowserRouter>
 
-    
-    
   );
 }
 export default App;

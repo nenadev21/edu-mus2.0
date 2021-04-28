@@ -1,0 +1,11 @@
+.Search {
+    margin: 40px;
+}
+
+.Search input {
+    width: 600px;
+}
+
+.Search form {
+    text-align: center;
+}

@@ -1,6 +1,9 @@
-.Level .title {
-    margin: 0 auto;
-    padding: 70px;
+.Level ul {
+    margin-top: 50px;
+    font-size: 18px;
+}
 
-
+.Level .is-2 {
+    
+    background-color: #FDFCFF;
 }
