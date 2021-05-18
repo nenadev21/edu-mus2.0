@@ -23,45 +23,16 @@ export default function Navbar() {
   <div className={`navbar-menu ${isOpen && "is-active"}`}>
           <div className="navbar-start">
             <NavLink className="navbar-item" activeClassName="is-active" to="/">
-              Inicio
+            Clases Listas
             </NavLink>
             <NavLink
               className="navbar-item"
               activeClassName="is-active"
-              to="/successstories"
+              to="/resource-picker"
             >
-              Casos de Exito
-            </NavLink>
-      <div className="navbar-item has-dropdown is-hoverable">
-        <a href="/" className="navbar-link">
-          Quienes Somos
-        </a>
-        <div className="navbar-dropdown">
-          <NavLink
-              className="navbar-item"
-              activeClassName="is-active"
-              to="/team"
-            >
-              Equipo
-            </NavLink>
-          <NavLink
-              className="navbar-item"
-              activeClassName="is-active"
-              to="/newsletter"
-            >
-              Newsletter
-            </NavLink>
-          <hr className="navbar-divider" />
-          <NavLink
-              className="navbar-item"
-              activeClassName="is-active"
-              to="/contactus"
-            >
-              Contactanos
-            </NavLink>
-        </div>
-      </div>
-    </div>
+            Crea Clases
+          </NavLink>
+          </div>
     <div className="navbar-end">
       <div className="navbar-item">
         <div className="buttons">

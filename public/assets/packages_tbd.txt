@@ -1,0 +1,5 @@
+react select: https://npm.runkit.com/react-select?t=1619632709109
+react drop-down: https://github.com/fraserxu/react-dropdown
+collapsible acordion: https://demo.mobiscroll.com/react/collapsible/accordion#
+react collapse: https://github.com/nkbt/react-collapse
+****react accesible acordion: https://react-accessible-accordion.springload.co.nz/

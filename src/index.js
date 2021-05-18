@@ -2,13 +2,16 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
+import { LevelAndUnitContextProvider } from './context/LevelAndUnitContext'
 import reportWebVitals from './reportWebVitals';
 import 'bulma/css/bulma.css';
-
+import './fontawesome';
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <LevelAndUnitContextProvider>
+      <App />
+    </LevelAndUnitContextProvider>
   </React.StrictMode>,
   document.getElementById('root')
 );
