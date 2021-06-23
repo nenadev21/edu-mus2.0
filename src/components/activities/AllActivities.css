@@ -1,0 +1,20 @@
+.accordion-context {
+    background-color: white;
+    overflow: hidden;
+    transition: max-height 0.6s ease;
+}
+
+.accordion-text {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    padding: 18px;
+}
+
+.accordion-icon {
+    margin-left: auto;
+    transition: transform 0.6s ease;
+}
+
+
+

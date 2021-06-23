@@ -3,11 +3,13 @@ import { NavLink, Link } from "react-router-dom";
 
 export default function Navbar() {
   const [isOpen, setOpen] = useState(false);
+
+
   return (
-        <nav className="navbar" role="navigation" aria-label="main navigation">
+    <nav className="navbar is-fixed-top" role="navigation" aria-label="main navigation">
       <div className="navbar-brand">
         <Link to="/">
-          <img src="/assets/logo.png" width="145" height="40" alt="logo" />
+          <img src="/assets/logo.png" alt="logo" width= "145"/>
         </Link>
       
     <a href="/" role="button"
@@ -23,23 +25,23 @@ export default function Navbar() {
   <div className={`navbar-menu ${isOpen && "is-active"}`}>
           <div className="navbar-start">
             <NavLink className="navbar-item" activeClassName="is-active" to="/">
-            Clases Listas
+            Tus clases listas
             </NavLink>
             <NavLink
               className="navbar-item"
               activeClassName="is-active"
               to="/resource-picker"
             >
-            Crea Clases
+            Encuentra recursos
           </NavLink>
           </div>
     <div className="navbar-end">
       <div className="navbar-item">
         <div className="buttons">
-          <a href="/" className="button is-primary">
+          <a href="/sign-up" className="button is-primary">
             <strong>Regístrate </strong>
           </a>
-          <a href="/" className="button is-light">
+          <a href="/sign-in" className="button is-light">
             Ingresa
           </a>
         </div>

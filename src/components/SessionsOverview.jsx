@@ -1,21 +1,27 @@
-import React from "react";
-import UnitHeader from "./UnitHeader";
-import SessionCard from "./SessionCard";
-import {sessionResources } from "./Data";
+import React, { useContext, useEffect } from "react"
+import UnitHeader from "./UnitHeader"
+import SessionCard from "./SessionCard"
+import MainActivity from "./activities/MainActivity"
+import { ClassContext } from '../context/ClassContext'
 
-export default function SessionsOverview() {
-  
+export default function SessionsOverview (props) {
+  const { getAllClasses, classes } = useContext(ClassContext)
+
+  useEffect(() => {
+    getAllClasses(props.unitId)
+    // eslint-disable-next-line
+  }, [])
+
   const renderSessions = (sessions) => {
     return sessions.map((session, index) => {
-      return index === 0
-        ? <SessionCard sessionInfo={session} cardIsOpen={true} key={index}/>
-        : <SessionCard sessionInfo={session} cardIsOpen={false} key={index}/>
+      return <SessionCard sessionInfo={ session } classes={classes} />
     })
   }
-    return (
-      <div className="UnitOverview">
-        <UnitHeader />
-        {renderSessions(sessionResources)}
-        </div>
-    );
+
+  return (
+    <div className="UnitOverview">
+      <UnitHeader />
+      {renderSessions(classes)}
+    </div>
+  )
 }

@@ -1,0 +1,40 @@
+
+.wrapper {
+margin-top: 30px;
+margin-left: 425px;
+flex-basis: auto;
+padding: 20px;
+border: 1px solid rgb(219,219,219);
+width: 350px;
+box-sizing: border-box;
+border-radius: 5px;
+}
+
+.sign-in-wrapper {
+    margin-top: 10px;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.register-with-google, .new-registration {
+    margin: 20px 0px 20px 0px;
+    text-align: center;
+}
+
+.terms {
+    color: #8e8e8e;
+    font-size: 12px;
+}
+
+.darker-terms {
+    color: #797878;
+    font-weight: bolder;
+}
+
+.registration {
+    margin: 10px;
+}
+
+.go-sign-in {
+    color: #0095f6;
+}

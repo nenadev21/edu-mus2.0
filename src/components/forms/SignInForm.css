@@ -1,0 +1,39 @@
+
+.wrapper {
+margin-top: 30px;
+margin-left: 425px;
+flex-basis: auto;
+padding: 20px;
+border: 1px solid rgb(219,219,219);
+width: 350px;
+box-sizing: border-box;
+border-radius: 5px;
+}
+
+.sign-in-wrapper {
+    margin-top: 10px;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.sign-in-title {
+    margin-bottom: 20px;
+}
+
+.sign-in-with-google, .forgot-password {
+    color: #385185;
+    font-size: 14px;
+    padding: 10px;
+    display: block;
+    text-align: center;
+    font-weight: bolder;
+}
+
+.sign-in {
+    margin: 20px 0px 20px 0px;
+    text-align: center;
+}
+
+.forgot-password {
+    font-weight: normal;
+}
