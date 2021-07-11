@@ -13,7 +13,7 @@ function InitialActivity({ data, classes }) {
   // const [forceStop, forceStopState] = useState(false);
   const [playing, setPlaying] = useState(true);
   
-  const content = useRef(0);
+  const content = useRef(0)
 
   function toggleAccordion({ data }) {
     setIsClose(isClose ? "": "is-active");
@@ -28,8 +28,8 @@ function InitialActivity({ data, classes }) {
             {data.initial_activity}  {`(${data.main_activity_resource.duration.toString()} minutes)`}
           </p>
             <FontAwesomeIcon className="accordion-icon" icon={iconSubtitle} color="#3E8ED0" />
-        </a><Video videoSize={setHeight} isClose={isClose} content={content} url={data.initial_activity_resource.link} resourceName={data.initial_activity_resource.resource_name} /> 
-        {/* {data.initial_activity_resource && <InitialActivityDescription setHeight={setHeight} isClose={isClose} content={content} data={data.initial_activity_resource} />} */}
+        </a>
+        {data.initial_activity_resource && <InitialActivityDescription setHeight={setHeight} isClose={isClose} content={content} data={data.initial_activity_resource} />} 
       </div>
     );
 }
