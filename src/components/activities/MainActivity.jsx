@@ -17,7 +17,7 @@ function MainActivity({ data, classes }) {
   function toggleAccordion({data}) {
     setIsClose(isClose ? "": "is-active");
     setIconSubtitle(isClose ? faPlus : faChevronUp);
-    setHeightState(isClose ? "0px" : "20px");
+    setHeightState(isClose ? "0px" : "700px");
   }
     return (
         <div className="accordion-section">
@@ -27,7 +27,7 @@ function MainActivity({ data, classes }) {
           </p>
             <FontAwesomeIcon className="accordion-icon" icon={iconSubtitle} color="#3E8ED0" />
         </Link>
-        {data.main_activity_resource ? <MainDescription setHeight={setHeight} isClose={isClose} content={content} data={data} resourceName={data.main_activity_resource.resource_name} /> : null}
+        {data.main_activity_resource && <MainDescription setHeight={setHeight} isClose={isClose} content={content} data={data.main_activity_resource} />}
       </div>
   );
 }

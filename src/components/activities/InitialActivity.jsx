@@ -1,9 +1,8 @@
 import React, { useState, useRef } from "react";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faChevronUp, faPlus } from '@fortawesome/free-solid-svg-icons';
+import InitialActivityDescription from "./InitialActivityDescription";
 import "./AllActivities.css";
-import Video from "../video/Video";
-
 
 function InitialActivity({ data, classes }) {
 
@@ -18,7 +17,7 @@ function InitialActivity({ data, classes }) {
   function toggleAccordion({ data }) {
     setIsClose(isClose ? "": "is-active");
     setIconSubtitle(isClose ? faPlus : faChevronUp);
-    setHeightState(isClose ? "0px" : "500px");
+    setHeightState(isClose ? "0px" : "700px");
   }
 
     return (
@@ -29,10 +28,9 @@ function InitialActivity({ data, classes }) {
           </p>
             <FontAwesomeIcon className="accordion-icon" icon={iconSubtitle} color="#3E8ED0" />
         </a>
-        {data.initial_activity_resource ? <Video videoSize={setHeight} isClose={isClose} content={content} url={data.initial_activity_resource.link} resourceName={data.initial_activity_resource.resource_name} /> : 
-        null}
+        {data.initial_activity_resource && <InitialActivityDescription setHeight={setHeight} isClose={isClose} content={content} data={data.initial_activity_resource} />}
       </div>
     );
 }
-
+{/* <Video videoSize={setHeight} isClose={isClose} content={content} url={data.initial_activity_resource.link} resourceName={data.initial_activity_resource.resource_name} /> */}
 export default InitialActivity;

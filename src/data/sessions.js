@@ -35,12 +35,59 @@ export const sessions = [
       class_section: 'second_activity',
       resource_name: 'Isaac un niño Aymara',
       resource_type: 'video',
+      guide: {
+        name: 'Reflexión sobre Los saludos en Aymara',
+        description:
+          'Guía para la reflexión sobre el video Los saludos en Aymara',
+        content:
+          'Después de ver el video podemos preguntarnos: ¿Qué nos gustó del video?, ¿Qué animales aparecen en el video?, ¿Qué pasa cuando hay carnaval?, ¿Qué pasa con el baile y la música durante carnaval?. Nos damos cuenta que  la música está presente en momentos importantes de nuestra vida como celebraciones especiales.',
+      },
       resource_details: null,
     },
-    main_activity: 'Presenta este juego en la tablet',
-    main_activity_details: 'Class1 - Main activity details.',
-    closure_instruction: 'Tips para cerrar la clase',
-    closure_instruction_details: 'Class1 - Closure instruction details.',
+    main_activity: 'Los saludos en Aymara',
+    main_activity_resource: {
+      start_instructions:
+        'Ahora vamos a ver un video donde la chinchilla Wiska le enseña a Wari la taruca como se saluda en idioma Aymara.',
+      img: 'https://i.ytimg.com/vi/fS7xiBpYGj0/0.jpg',
+      link: 'https://youtu.be/H8dfxn_AgF8',
+      rating: null,
+      subject: null,
+      class_id: 'ebac8604-05d8-4461-875f-522f000dd184',
+      duration: null,
+      class_order: null,
+      description:
+        'Video animado donde la chinchilla Wiska le enseña a Wari la taruca como se saluda en idioma Aymara',
+      resource_id: 'f89213b7-41a4-445f-9d70-a4a9635a06dd',
+      class_section: 'third_activity',
+      resource_name: 'Los saludos en Aymara',
+      resource_type: 'video',
+      resource_details: null,
+      guide: {
+        name: 'Palabras en Aymara',
+        description: 'Guía con las palabras del video Los saludos en Aymara',
+        content: 'TBD',
+      },
+    },
+    closure_instruction: 'Cancion de los saludos',
+    closure_instruction_resource: {
+      start_instructions:
+        'Vamos a volver a escuchar la  canción de los saludos en Aymara que aparece hacia el final del video. Podemos mostrar la letra de la canción en la pizarra para que cantemos todes juntes.',
+      img: 'https://i.ytimg.com/vi/fS7xiBpYGj0/0.jpg',
+      link: null,
+      rating: null,
+      subject: null,
+      class_id: 'ebac8604-05d8-4461-875f-522f000dd184',
+      duration: null,
+      description: 'Guia con la letra de la canción de los saludos en Aymara',
+      resource_id: 'cea0eeff-68b1-4458-99c2-3835bc9e2d48',
+      class_section: 'fourth_activity',
+      resource_name: 'Cancion de los saludos',
+      resource_type: 'cancion',
+      resource_details:
+        'Dos palomitas se saludaron diciendo ¿Kamisaraki? ¿Kunas Sutima? Paloma - Nayan sutina Paloma Jorge, Waliki ¿Kunas sutima, kamisaraki? ¿Jumasti? Nayana Eduardo. Jikisin kama paloma Jorge jilata. Waliki Paloma. Jikisin kama paloma Eduardo jilata',
+      end_instructions:
+        '¿Cantamos junto al video?. También si el profesor toca algún instrumento puede acompañar el video con el instrumento o también hacer la base armónica (se adjunta partitura con armonía). Podemos hacer un juego donde cada alumno canta una línea de la canción.',
+    },
   },
   // {
   //   session_name: 'Clase 2',
