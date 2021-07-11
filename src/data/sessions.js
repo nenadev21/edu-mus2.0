@@ -76,7 +76,7 @@ export const sessions = [
       resource_name: 'Cancion de los saludos',
       resource_type: 'cancion',
       resource_details:
-        'Dos palomitas se saludaron diciendo ¿Kamisaraki? ¿Kunas Sutima? Paloma - Nayan sutina Paloma Jorge, Waliki ¿Kunas sutima, kamisaraki? ¿Jumasti? Nayana Eduardo. Jikisin kama paloma Jorge jilata. Waliki Paloma. Jikisin kama paloma Eduardo jilata',
+        'Dos palomitas se saludaron diciendo\n ¿Kamisaraki? ¿Kunas Sutima? Paloma\n\n - Nayan sutina Paloma Jorge, Waliki\n ¿Kunas sutima, kamisaraki? ¿Jumasti?\n\n Nayana Eduardo.\n\n Jikisin kama paloma Jorge jilata.\n\n Waliki Paloma.\n\n Jikisin kama paloma Eduardo jilata',
       end_instructions:
         '¿Cantamos junto al video?. También si el profesor toca algún instrumento puede acompañar el video con el instrumento o también hacer la base armónica (se adjunta partitura con armonía). Podemos hacer un juego donde cada alumno canta una línea de la canción.',
     },
