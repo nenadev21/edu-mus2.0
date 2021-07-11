@@ -1,11 +1,11 @@
 import React from "react"
 import ReactDOM from "react-dom"
 import "./index.css"
-import App from "./App"
+import App from "./app/App"
 import { LevelAndUnitContextProvider } from "./context/LevelAndUnitContext"
-import reportWebVitals from "./reportWebVitals"
+import reportWebVitals from "./performance/reportWebVitals"
 import "bulma/css/bulma.css"
-import "./fontawesome"
+import "./icons/fontawesome"
 
 ReactDOM.render(
   <React.StrictMode>

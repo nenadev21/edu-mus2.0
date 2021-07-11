@@ -1,12 +1,12 @@
-import Navbar from "./components/Navbar"
-import Home from "./pages/Home"
-import SessionsOverview from "./components/SessionsOverview"
-import ResourcePicker from "./pages/ResourcePicker"
+import Navbar from "../components/Navbar"
+import Home from "../pages/Home/Home"
+import SessionsOverview from "../pages/SessionOverview/SessionsOverview"
+import ResourcePicker from "../pages/ResourcePicker/ResourcePicker"
 import { BrowserRouter, Route, Switch } from "react-router-dom"
-import { ClassContextProvider } from "./context/ClassContext"
-import SignUpForm from "./components/forms/SignUpForm"
-import SignInForm from "./components/forms/SignInForm"
-import Video from "./components/video/Video";
+import { ClassContextProvider } from "../context/ClassContext"
+import SignUpForm from "../components/forms/SignUp/SignUpForm"
+import SignInForm from "../components/forms/LoginIn/SignInForm"
+import Video from "../components/video/Video";
 
 function App () {
   return (

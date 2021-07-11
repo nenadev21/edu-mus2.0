@@ -26,7 +26,7 @@ function ClosureInstruction({ data }) {
           </p>
             <FontAwesomeIcon className="accordion-icon" icon={iconSubtitle} color="#3E8ED0" />
         </a>
-        <ClosureDescription setHeight={setHeight} isClose={isClose} content={content} data={data} />
+        {/* <ClosureDescription setHeight={setHeight} isClose={isClose} content={content} data={data} /> */}
       </div>
     );
 }

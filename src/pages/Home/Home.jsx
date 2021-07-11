@@ -1,10 +1,10 @@
 import React, { useEffect, useContext } from 'react';
 import './Home.css';
 import { Link } from 'react-router-dom';
-import UnitCard from '../components/UnitCard';
-import HomeHeader from './HomeHeader';
+import UnitCard from '../../components/cards/UnitCard';
+import HomeHeader from '../../components/headers/HomeHeader';
 
-import { LevelAndUnitContext } from '../context/LevelAndUnitContext';
+import { LevelAndUnitContext } from '../../context/LevelAndUnitContext';
 
 export default function Home() {
     const { getAllLevels, getAllUnits, levels, units } = useContext(LevelAndUnitContext);

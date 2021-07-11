@@ -1,7 +1,7 @@
 import React from "react";
-import Search from "../components/Search";
-import ResourceCard from "../components/ResourceCard";
-import { categories, resources } from "../components/Data";
+import ResourceCard from "../../components/cards/ResourceCard";
+import './ResourcePicker.css'
+import { categories, resources } from "../../data/resources";
 
 export default function ResourcePicker() {
 
@@ -25,7 +25,11 @@ export default function ResourcePicker() {
             <ul>
                 {renderCategories(categories)}
             </ul>
-            <Search />
+            <div className="Search">
+                <form>
+                    <input className="input is-rounded is-focused is-medium" type="text" placeholder="Busca por curso, unidad o tema" />
+                </form>
+            </div>
             <div style={{display: "flex", flexWrap: "wrap"}}>
                 {renderResources(resources)}
             </div>
