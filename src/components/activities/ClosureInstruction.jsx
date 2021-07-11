@@ -22,7 +22,7 @@ function ClosureInstruction({ data }) {
         <div className="accordion-section">
         <a className="panel-block" onClick={toggleAccordion}>
           <p className="accordion-title">
-            {data.closure_instruction}
+            {data.closure_instruction}  {`(${data.closure_instruction_resource.duration.toString()} minutes)`}
           </p>
             <FontAwesomeIcon className="accordion-icon" icon={iconSubtitle} color="#3E8ED0" />
         </a>

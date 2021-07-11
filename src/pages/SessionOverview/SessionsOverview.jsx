@@ -18,7 +18,7 @@ export default function SessionsOverview (props) {
       return <SessionCard session={ session }/>
     })
   }
-
+   console.log(sessions)
   return (
     <div className="UnitOverview">
       <UnitHeader />

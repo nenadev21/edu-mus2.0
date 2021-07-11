@@ -1,13 +1,11 @@
 import React, { useState, useRef, useEffect } from "react";
 import { findDOMNode } from "react-dom";
-
 import AppBar from "@material-ui/core/AppBar";
 import Toolbar from "@material-ui/core/Toolbar";
 import Typography from "@material-ui/core/Typography";
 import Container from "@material-ui/core/Container";
 import ReactPlayer from "react-player";
 import { makeStyles, withStyles } from "@material-ui/core/styles";
-
 import Slider from "@material-ui/core/Slider";
 import Tooltip from "@material-ui/core/Tooltip";
 import screenful from "screenfull";
@@ -297,7 +295,7 @@ function Video({videoSize, setHeight, isClose, content, url, resourceName}) {
             height={videoSize}
             url={url}
             pip={pip}
-            playing={isClose}
+            playing={playing && isClose}
             controls={false}
             light={light}
             loop={loop}

@@ -23,7 +23,7 @@ function MainActivity({ data, classes }) {
         <div className="accordion-section">
         <Link className="panel-block" onClick={toggleAccordion}>
           <p className="accordion-title">
-            {data.main_activity}
+            {data.main_activity} {`(${data.main_activity_resource.duration.toString()} minutes)`}
           </p>
             <FontAwesomeIcon className="accordion-icon" icon={iconSubtitle} color="#3E8ED0" />
         </Link>

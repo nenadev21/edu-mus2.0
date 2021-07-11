@@ -4,7 +4,7 @@ import { faChevronUp, faPlus } from '@fortawesome/free-solid-svg-icons';
 import "./AllActivities.css";
 import StartActivityDescription from "./StartActivityDescription";
 
-function StartInstruction({data}) {
+function ReflexionActivity({data}) {
   const [isClose, setIsClose] = useState("");
   const [iconSubtitle, setIconSubtitle] = useState(faPlus);
   const [setHeight, setHeightState] = useState("0px");
@@ -23,13 +23,13 @@ function StartInstruction({data}) {
         <div className="accordion-section">
         <a className="panel-block" onClick={toggleAccordion}>
           <p className="accordion-title">
-            {data.start_instruction} {`(${data.start_instruction_resource.duration.toString()} minutes)`}
+            {data.reflexion}  {`(${data.reflexion_resource.duration.toString()} minutes)`}
           </p>
             <FontAwesomeIcon className="accordion-icon" icon={iconSubtitle} color="#3E8ED0" />
         </a>
-        <StartActivityDescription setHeight={setHeight} isClose={isClose} content={content} data={data.start_instruction_resource}/>
+        <StartActivityDescription setHeight={setHeight} isClose={isClose} content={content} data={data.reflexion_resource}/>
       </div>
     );
 }
 
-export default StartInstruction;
+export default ReflexionActivity
