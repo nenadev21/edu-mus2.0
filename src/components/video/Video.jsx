@@ -143,7 +143,7 @@ const format = (seconds) => {
 let count = 0;
 
 
-function Video({videoSize, setHeight, isClose, content, url, resourceName}) {
+function Video({videoSize, vidHeight, isClosed, content, url, resourceName}) {
   const classes = useStyles();
   // const [showControls, setShowControls] = useState(false);
   // const [count, setCount] = useState(0);
@@ -151,7 +151,7 @@ function Video({videoSize, setHeight, isClose, content, url, resourceName}) {
   const [timeDisplayFormat, setTimeDisplayFormat] = React.useState("normal");
   const [state, setState] = useState({
     pip: false,
-    playing: true,
+    playing: false,
     controls: false,
     light: false,
 
@@ -281,8 +281,8 @@ function Video({videoSize, setHeight, isClose, content, url, resourceName}) {
   const totalDuration = format(duration);
 
   return (
-    <div ref={content} style={{maxHeight: `${setHeight}`}} className="accordion-context">
-      <Container className={`accordion-text ${isClose}`} style={{margin: -16}}>
+    <div ref={content} style={{maxHeight: `${vidHeight}`}} className="accordion-context">
+      <Container className={`accordion-text ${isClosed}`} style={{margin: -16}}>
         <div
           onMouseMove={handleMouseMove}
           onMouseLeave={hanldeMouseLeave}
@@ -295,7 +295,7 @@ function Video({videoSize, setHeight, isClose, content, url, resourceName}) {
             height={videoSize}
             url={url}
             pip={pip}
-            playing={playing && isClose}
+            playing={playing && isClosed}
             controls={false}
             light={light}
             loop={loop}

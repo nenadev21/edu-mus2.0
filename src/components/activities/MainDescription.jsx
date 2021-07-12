@@ -1,19 +1,20 @@
 import Video from "../video/Video";
 import React, { useRef } from "react";
-function MainDescription({ setHeight, isClose, data }) {
+import { addLineBreaks } from "../../helpers/addLineBreaks";
+
+function MainDescription({activityHeight, vidHeight, isClosed, data }) {
 
     const content = useRef(0);
     return (
-        <div className="accordion-context">
-            <div style={{ maxHeight: `${setHeight}` }}>
-            <div className={`accordion-text ${isClose} start-instruction`}>Instrucciones de inicio: {data && data.start_instructions}</div>
+        <div className="accordion-context" style={{ maxHeight: `${activityHeight}` }}>
+      
+            <div className={`accordion-text ${isClosed} start-instruction`}>{data && addLineBreaks(data.start_instructions)}</div>
+            
+            <Video style={{ maxHeight: `${vidHeight}` }} videoSize={vidHeight} isClosed={isClosed} content={content} url={data.link} resourceName={data.resource_name} />
             {data.guide && <div className='accordion-text guide'>
-                <h4>{data.guide.name}</h4>
-                <p>{data.guide.description}</p>
-                <p>{data.guide.content}</p>
+                <p>{addLineBreaks(data.guide.content)}</p>
                 </div>}
-                </div>
-            <Video style={{ maxHeight: `${setHeight}` }} videoSize={setHeight} isClose={isClose} content={content} url={data.link} resourceName={data.resource_name} />    
+             
         </div>
     );
 }

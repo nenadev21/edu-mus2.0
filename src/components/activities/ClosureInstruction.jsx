@@ -6,16 +6,18 @@ import ClosureDescription from "./ClosureDescription";
 
 
 function ClosureInstruction({ data }) {
-  const [isClose, setIsClose] = useState("");
+  const [isClosed, setIsClose] = useState("");
   const [iconSubtitle, setIconSubtitle] = useState(faPlus);
-  const [setHeight, setHeightState] = useState("0px")
+  const [vidHeight, setVidHeight] = useState("0px")
+  const [activityHeight, setActivityHeight] = useState("0px");
   
   const content = useRef(null);
 
   function toggleAccordion({data}) {
-    setIsClose(isClose ? "": "is-active");
-    setIconSubtitle(isClose ? faPlus : faChevronUp);
-    setHeightState(isClose ? "0px" : `${content.current.scrollHeight}px`);
+    setIsClose(isClosed ? "": "is-active");
+    setIconSubtitle(isClosed ? faPlus : faChevronUp);
+    setVidHeight(isClosed ? "0px" : `${content.current.scrollHeight}px`);
+    setActivityHeight(isClosed ? "0px" : 'fit-content')
   }
 
     return (
@@ -26,7 +28,7 @@ function ClosureInstruction({ data }) {
           </p>
             <FontAwesomeIcon className="accordion-icon" icon={iconSubtitle} color="#3E8ED0" />
         </a>
-         <ClosureDescription setHeight={setHeight} isClose={isClose} content={content} data={data.closure_instruction_resource} /> 
+        <ClosureDescription activityHeight={activityHeight} vidHeight={vidHeight} isClosed={isClosed} content={content} data={data.closure_instruction_resource} />
       </div>
     );
 }

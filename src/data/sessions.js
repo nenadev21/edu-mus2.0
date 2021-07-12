@@ -36,7 +36,7 @@ export const sessions = [
         description:
           'Guía para la reflexión sobre el video Los saludos en Aymara',
         content:
-          'Después de ver el video podemos preguntarnos: ¿Qué nos gustó del video?, ¿Qué animales aparecen en el video?, ¿Qué pasa cuando hay carnaval?, ¿Qué pasa con el baile y la música durante carnaval?. Nos damos cuenta que  la música está presente en momentos importantes de nuestra vida como celebraciones especiales.',
+          'Después de ver el video podemos preguntarnos:\n ¿Qué nos gustó del video?\n ¿Qué animales aparecen en el video?\n ¿Qué pasa cuando hay carnaval?\n ¿Qué pasa con el baile y la música durante carnaval?.\n\n Nos damos cuenta que  la música está presente en momentos importantes de nuestra vida como celebraciones especiales.',
       },
       resource_details: null,
     },
@@ -59,13 +59,13 @@ export const sessions = [
       guide: {
         name: 'Palabras en Aymara',
         description: 'Guía con las palabras del video Los saludos en Aymara',
-        content: '',
+        content: 'Ya que vimos el video, escribamos en la pizarra algunos palabras que aprendimos:\n Kamisaraki : ¿Cómo estás?\n Waliki: Estoy bien\n Jumasti: ¿Y tu?\n Kunas Sutima: ¿Cómo te llamas?\n Naya Sutinha : Yo me llamo \nJikisin kama: Hasta la próxima\n Jilata: Amigo\n\n ¿Podemos repetirlas todes juntes?',
       },
     },
     closure_instruction: 'Cancion de los saludos',
     closure_instruction_resource: {
       start_instructions:
-        'Vamos a volver a escuchar la  canción de los saludos en Aymara que aparece hacia el final del video. Podemos mostrar la letra de la canción en la pizarra para que cantemos todes juntes.',
+        'Vamos a volver a escuchar la  canción de los saludos en Aymara que aparece hacia el final del video.\n Podemos mostrar la letra de la canción en la pizarra para que cantemos todes juntes.',
       img: 'https://i.ytimg.com/vi/fS7xiBpYGj0/0.jpg',
       link: null,
       class_id: 'ebac8604-05d8-4461-875f-522f000dd184',
@@ -78,12 +78,12 @@ export const sessions = [
       resource_details:
         'Dos palomitas se saludaron diciendo\n ¿Kamisaraki? ¿Kunas Sutima? Paloma\n\n - Nayan sutina Paloma Jorge, Waliki\n ¿Kunas sutima, kamisaraki? ¿Jumasti?\n\n Nayana Eduardo.\n\n Jikisin kama paloma Jorge jilata.\n\n Waliki Paloma.\n\n Jikisin kama paloma Eduardo jilata',
       end_instructions:
-        '¿Cantamos junto al video?. También si el profesor toca algún instrumento puede acompañar el video con el instrumento o también hacer la base armónica (se adjunta partitura con armonía). Podemos hacer un juego donde cada alumno canta una línea de la canción.',
+        '¿Cantamos junto al video?. También si el profesor toca algún instrumento puede acompañar el video con el instrumento o también hacer la base armónica (se adjunta partitura con armonía).\n\n Podemos hacer un juego donde cada alumno canta una línea de la canción.',
     },
     reflexion: '¿Qué nos gustó hoy?',
     reflexion_resource: {
       start_instructions:
-        '¿Qué fue lo que más nos gustó hoy? ¿Qué fue lo más entretenido que aprendimos?. La próxima clase vamos a seguir practicando la canción.',
+        '¿Qué fue lo que más nos gustó hoy? ¿Qué fue lo más entretenido que aprendimos?.\n La próxima clase vamos a seguir practicando la canción.',
       resource_name: '¿Qué nos gustó hoy?',
       img: null,
       link: null,

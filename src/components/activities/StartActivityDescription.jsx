@@ -1,9 +1,9 @@
-
-function StartActivityDescription({ setHeight, isClose, content, data }) {
+import { addLineBreaks } from "../../helpers/addLineBreaks";
+function StartActivityDescription({activityHeight, vidHeight, isClosed, content, data }) {
  
     return (
-        <div ref={content} style={{maxHeight: `${setHeight}`}}className="accordion-context">
-            <div className={`accordion-text ${isClose} start-instruction`}>Instrucciones de inicio: {data && data.start_instructions}</div>
+        <div ref={content} style={{maxHeight: `${activityHeight}`}}className="accordion-context">
+            <div className={`accordion-text ${isClosed} start-instruction`}>{addLineBreaks(data.start_instructions)}</div>
         </div>
         
     );

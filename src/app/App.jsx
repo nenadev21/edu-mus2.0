@@ -1,4 +1,4 @@
-import Navbar from "../components/Navbar"
+import Navbar from "../components/nav/Navbar"
 import Home from "../pages/Home/Home"
 import SessionsOverview from "../pages/SessionOverview/SessionsOverview"
 import ResourcePicker from "../pages/ResourcePicker/ResourcePicker"
