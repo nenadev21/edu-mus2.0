@@ -1,4 +1,4 @@
-import React, { useState, useRef, useEffect } from "react";
+import React, { useState, useRef, useCallback, useEffect } from "react";
 import { findDOMNode } from "react-dom";
 import AppBar from "@material-ui/core/AppBar";
 import Toolbar from "@material-ui/core/Toolbar";
@@ -10,6 +10,7 @@ import Slider from "@material-ui/core/Slider";
 import Tooltip from "@material-ui/core/Tooltip";
 import screenful from "screenfull";
 import Controls from "./Controls";
+import screenfull from "screenfull";
 
 const useStyles = makeStyles((theme) => ({
   playerWrapper: {
@@ -143,7 +144,7 @@ const format = (seconds) => {
 let count = 0;
 
 
-function Video({videoSize, vidHeight, isClosed, content, url, resourceName}) {
+function Video({videoSize, isClosed, content, url, resourceName}) {
   const classes = useStyles();
   // const [showControls, setShowControls] = useState(false);
   // const [count, setCount] = useState(0);
@@ -171,7 +172,7 @@ function Video({videoSize, vidHeight, isClosed, content, url, resourceName}) {
     playing,
     controls,
     light,
-
+    isFullscreen,
     muted,
     loop,
     playbackRate,
@@ -240,6 +241,7 @@ function Video({videoSize, vidHeight, isClosed, content, url, resourceName}) {
 
   const toggleFullScreen = () => {
     screenful.toggle(playerContainerRef.current);
+    setState({ ...state, isFullscreen: !isFullscreen})
   };
 
   const handleMouseMove = () => {
@@ -262,7 +264,7 @@ function Video({videoSize, vidHeight, isClosed, content, url, resourceName}) {
     setState({ ...state, playbackRate: rate });
   };
 
-  const hanldeMute = () => {
+  const handleMute = () => {
     setState({ ...state, muted: !state.muted });
   };
 
@@ -281,18 +283,18 @@ function Video({videoSize, vidHeight, isClosed, content, url, resourceName}) {
   const totalDuration = format(duration);
 
   return (
-    <div ref={content} style={{maxHeight: `${vidHeight}`}} className="accordion-context">
       <Container className={`accordion-text ${isClosed}`} style={{margin: -16}}>
-        <div
-          onMouseMove={handleMouseMove}
-          onMouseLeave={hanldeMouseLeave}
-          ref={playerContainerRef}
-          className={classes.playerWrapper}
+      <div
+        onMouseMove={handleMouseMove}
+        onMouseLeave={hanldeMouseLeave}
+        ref={playerContainerRef}
+        className={classes.playerWrapper}
+        style={{height: '500px'}}
         >
           <ReactPlayer
             ref={playerRef}
             width={"100%"}
-            height={videoSize}
+            height={"100%"}
             url={url}
             pip={pip}
             playing={playing && isClosed}
@@ -325,7 +327,7 @@ function Video({videoSize, vidHeight, isClosed, content, url, resourceName}) {
             played={played}
             elapsedTime={elapsedTime}
             totalDuration={totalDuration}
-            onMute={hanldeMute}
+            onMute={handleMute}
             muted={muted}
             onVolumeChange={handleVolumeChange}
             onVolumeSeekDown={handleVolumeSeekDown}
@@ -338,7 +340,6 @@ function Video({videoSize, vidHeight, isClosed, content, url, resourceName}) {
           />
         </div>
       </Container>
-    </div>
   );
 }
 

@@ -10,7 +10,6 @@ function MainActivity({ data, classes }) {
   console.log(classes)
   const [isClosed, setIsClose] = useState("");
   const [iconSubtitle, setIconSubtitle] = useState(faPlus);
-  const [vidHeight, setVidHeight] = useState("0px")
   const [activityHeight, setActivityHeight] = useState("0px");
   
   const content = useRef(null);
@@ -18,7 +17,6 @@ function MainActivity({ data, classes }) {
   function toggleAccordion({data}) {
     setIsClose(isClosed ? "": "is-active");
     setIconSubtitle(isClosed ? faPlus : faChevronUp);
-    setVidHeight(isClosed ? "0px" : "500px");
     setActivityHeight(isClosed ? "0px" : 'fit-content')
   }
     return (
@@ -29,7 +27,7 @@ function MainActivity({ data, classes }) {
           </p>
             <FontAwesomeIcon className="accordion-icon" icon={iconSubtitle} color="#3E8ED0" />
         </Link>
-        {data.main_activity_resource && <MainDescription activityHeight={activityHeight} vidHeight={vidHeight} isClosed={isClosed} content={content} data={data.main_activity_resource} />}
+        {data.main_activity_resource && <MainDescription activityHeight={activityHeight} isClosed={isClosed} content={content} data={data.main_activity_resource} />}
       </div>
   );
 }

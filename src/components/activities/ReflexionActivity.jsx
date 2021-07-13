@@ -7,7 +7,6 @@ import StartActivityDescription from "./StartActivityDescription";
 function ReflexionActivity({data}) {
   const [isClosed, setIsClose] = useState("");
   const [iconSubtitle, setIconSubtitle] = useState(faPlus);
-  const [vidHeight, setVidHeight] = useState("0px");
   const [activityHeight, setActivityHeight] = useState("0px");
   // const [forceStop, forceStopState] = useState(false);
   const [playing, setPlaying] = useState(true);
@@ -17,7 +16,6 @@ function ReflexionActivity({data}) {
   function toggleAccordion({ data }) {
     setIsClose(isClosed ? "": "is-active");
     setIconSubtitle(isClosed ? faPlus : faChevronUp);
-    setVidHeight(isClosed ? "0px" : "500px");
     setActivityHeight(isClosed ? "0px" : 'fit-content')
   }
 
@@ -29,7 +27,7 @@ function ReflexionActivity({data}) {
           </p>
             <FontAwesomeIcon className="accordion-icon" icon={iconSubtitle} color="#3E8ED0" />
         </a>
-        <StartActivityDescription activityHeight={activityHeight} vidHeight={vidHeight} isClosed={isClosed} content={content} data={data.reflexion_resource}/>
+        <StartActivityDescription activityHeight={activityHeight} isClosed={isClosed} content={content} data={data.reflexion_resource}/>
       </div>
     );
 }
