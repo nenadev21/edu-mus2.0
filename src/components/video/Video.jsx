@@ -172,7 +172,6 @@ function Video({videoSize, isClosed, content, url, resourceName}) {
     playing,
     controls,
     light,
-    isFullscreen,
     muted,
     loop,
     playbackRate,
@@ -241,7 +240,6 @@ function Video({videoSize, isClosed, content, url, resourceName}) {
 
   const toggleFullScreen = () => {
     screenful.toggle(playerContainerRef.current);
-    setState({ ...state, isFullscreen: !isFullscreen})
   };
 
   const handleMouseMove = () => {
