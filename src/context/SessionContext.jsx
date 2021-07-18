@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { REACT_APP_API_ENDPOINT} from "../config/config.js"
+import { API_BASE_URL} from "../config/config.js"
 import { callApi } from '../helpers/callApi'
 
 const SessionContext = React.createContext()
@@ -10,7 +10,7 @@ const SessionContextProvider = (props) => {
     const [sessionError, setSessionError] = useState('')
 
     const getAllSessions = (unitId) => {
-        callApi(`${REACT_APP_API_ENDPOINT}/units/${unitId}/sessions`,
+        callApi(`${API_BASE_URL}/units/${unitId}/sessions`,
             setSessions,
             setSessionError)
     }

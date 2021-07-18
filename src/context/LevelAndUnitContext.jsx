@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { REACT_APP_API_ENDPOINT } from "../config/config.js"
+import { API_BASE_URL } from "../config/config.js"
 import { callApi } from '../helpers/callApi'
 
 const LevelAndUnitContext = React.createContext()
@@ -12,13 +12,13 @@ const LevelAndUnitContextProvider = (props) => {
   const [unitsError, setUnitsError] = useState('')
 
   const getAllLevels = () => {
-    callApi(`${REACT_APP_API_ENDPOINT}/levels`,
+    callApi(`${API_BASE_URL}/levels`,
       setLevels,
       setLevelsError)
   }
 
   const getAllUnits = () => {
-    callApi(`${REACT_APP_API_ENDPOINT}/units`,
+    callApi(`${API_BASE_URL}/units`,
       setUnits,
       setUnitsError)
   }
