@@ -1,6 +1,6 @@
 import { addLineBreaks } from "../../helpers/addLineBreaks";
 
-function ClosureDescription({ activityHeight, isClosed, content, data }) {
+function ClosureDescription({ activityHeight, vidHeight, isClosed, content, data }) {
 
     return (
         <div ref={content} style={{ maxHeight: `${activityHeight}` }} className="accordion-context">

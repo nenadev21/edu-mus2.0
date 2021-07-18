@@ -5,6 +5,8 @@ import {
   faDrum,
   faGuitar,
   faHeadphones,
+  faChevronUp,
+  faPlus
 } from "@fortawesome/free-solid-svg-icons";
 
-library.add(faMusic, faDrum, faGuitar, faHeadphones);
+library.add(faMusic, faDrum, faGuitar, faHeadphones, faChevronUp, faPlus);

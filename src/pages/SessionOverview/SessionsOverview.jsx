@@ -3,22 +3,23 @@ import UnitHeader from "../../components/headers/UnitHeader"
 import SessionCard from "../../components/cards/SessionCard"
 import { sessions } from '../../data/sessions'
 import MainActivity from "../../components/activities/MainActivity"
-import { ClassContext } from '../../context/ClassContext'
+import { SessionContext } from '../../context/SessionContext'
 
 export default function SessionsOverview (props) {
-  // const { getAllClasses, classes } = useContext(ClassContext)
+  // const { getAllSessions, sessions } = useContext(SessionContext)
 
   // useEffect(() => {
-  //   getAllClasses(props.unitId)
+  //   getAllSessions(props.unitId)
   //   // eslint-disable-next-line
   // }, [])
 
   const renderSessions = (sessions) => {
+    console.log(sessions)
     return sessions.map((session, index) => {
       return <SessionCard session={ session }/>
     })
   }
-   console.log(sessions)
+ 
   return (
     <div className="UnitOverview">
       <UnitHeader />

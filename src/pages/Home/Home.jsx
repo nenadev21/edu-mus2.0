@@ -26,7 +26,7 @@ export default function Home() {
       return (
         <li key={index}>
           {' '}
-          <Link to="/"> {level.grade_name} </Link>{' '}
+          <Link to="/"> {level.level_name} </Link>{' '}
         </li>
       );
     });

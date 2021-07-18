@@ -3,7 +3,7 @@ import Home from "../pages/Home/Home"
 import SessionsOverview from "../pages/SessionOverview/SessionsOverview"
 import ResourcePicker from "../pages/ResourcePicker/ResourcePicker"
 import { BrowserRouter, Route, Switch } from "react-router-dom"
-import { ClassContextProvider } from "../context/ClassContext"
+import { SessionContextProvider } from "../context/SessionContext"
 import SignUpForm from "../components/forms/SignUp/SignUpForm"
 import SignInForm from "../components/forms/LoginIn/SignInForm"
 import Video from "../components/video/Video";
@@ -25,11 +25,11 @@ function App () {
         <Route path="/sign-in">
           <SignInForm />
         </Route>
-        <ClassContextProvider>
-          <Route path="/sessions-overview/:unit_id"
-            render={ ({ match }) => <SessionsOverview unitId={ match.params.unit_id } /> }
+        <SessionContextProvider>
+          <Route path="/sessions-overview/:id"
+            render={ ({ match }) => <SessionsOverview unitId={ match.params.id } /> }
           />
-        </ClassContextProvider>
+        </SessionContextProvider>
       </Switch>
     </BrowserRouter >
   )

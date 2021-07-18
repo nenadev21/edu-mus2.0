@@ -9,7 +9,7 @@ function InitialActivity({ data, classes }) {
 
   const [isClosed, setIsClose] = useState("");
   const [iconSubtitle, setIconSubtitle] = useState(faPlus);
-
+  const [vidHeight, setVidHeight] = useState("0px");
   const [activityHeight, setActivityHeight] = useState("0px");
   // const [forceStop, forceStopState] = useState(false);
   const [playing, setPlaying] = useState(true);
@@ -19,7 +19,7 @@ function InitialActivity({ data, classes }) {
   function toggleAccordion({ data }) {
     setIsClose(isClosed ? "": "is-active");
     setIconSubtitle(isClosed ? faPlus : faChevronUp);
-
+    setVidHeight(isClosed ? "0px" : "500px");
     setActivityHeight(isClosed ? "0px" : 'fit-content')
   }
 
@@ -31,7 +31,7 @@ function InitialActivity({ data, classes }) {
           </p>
             <FontAwesomeIcon className="accordion-icon" icon={iconSubtitle} color="#3E8ED0" />
         </a>
-        {data.initial_activity_resource && <InitialActivityDescription activityHeight={ activityHeight} isClosed={isClosed} content={content} data={data.initial_activity_resource} />}
+        {data.initial_activity_resource && <InitialActivityDescription activityHeight={ activityHeight} vidHeight={vidHeight} isClosed={isClosed} content={content} data={data.initial_activity_resource} />}
       </div>
     );
 }

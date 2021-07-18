@@ -2,7 +2,8 @@ import React from "react"
 import { Link } from "react-router-dom"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
-export default function UnitCard ({ unit }) {
+export default function UnitCard({ unit }) {
+
     return (
         <div style={ { flexBasis: "33.333333%" } } className="UnitCard">
             <div className="card" style={ { height: "240px", margin: "15px" } }>
@@ -18,7 +19,7 @@ export default function UnitCard ({ unit }) {
                     <div className="content">
                         { unit.subtitle }
                     </div>
-                    <Link className="button is-info is-outlined is-small" to={ `/sessions-overview/${unit.unit_id}` }>{ unit.class_count } clases </Link>
+                    <Link className="button is-info is-outlined is-small" to={ `/sessions-overview/${(unit.id).toString()}` }>{ unit.session_count } clases </Link>
                 </div>
             </div>
         </div>
