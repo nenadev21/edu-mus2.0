@@ -281,18 +281,19 @@ function Video({videoSize, vidHeight, isClosed, content, url, resourceName}) {
   const totalDuration = format(duration);
 
   return (
-    <div ref={content} style={{maxHeight: `${vidHeight}`}} className="accordion-context">
+    <div className="accordion-context">
       <Container className={`accordion-text ${isClosed}`} style={{margin: -16}}>
         <div
           onMouseMove={handleMouseMove}
           onMouseLeave={hanldeMouseLeave}
+          style={{height: "500px"}}
           ref={playerContainerRef}
           className={classes.playerWrapper}
         >
           <ReactPlayer
             ref={playerRef}
             width={"100%"}
-            height={videoSize}
+            height={"100%"}
             url={url}
             pip={pip}
             playing={playing && isClosed}
