@@ -1,23 +1,22 @@
 import React from 'react'
-import StartInstruction from '../activities/StartInstruction'
-import InitialActivity from '../activities/InitialActivity'
-import MainActivity from '../activities/MainActivity'
-import ClosureInstruction from '../activities/ClosureInstruction'
-import ReflexionActivity from '../activities/ReflexionActivity'
+import Activity from '../activities/Activity'
 
 export default function SessionCard({ session }) {
-  
+  const { session_name, session_activities } = session
+
+  const renderActivities = (activities) => {
+    return activities.map((activity) => {
+      return <Activity activity={ activity} />
+    })
+  }
+
   return (
     <div className="SessionCard" style={ { margin: "30px" } }>
       <article className="panel is-info">
         <p className="panel-heading">
-          {session.session_name}
+          {session_name}
         </p>
-        <StartInstruction data={session} />
-        <InitialActivity data={session} />
-        <MainActivity data={session} />
-        <ClosureInstruction data={session} />
-        <ReflexionActivity data={session} />
+        { renderActivities(session_activities)}
       </article>
     </div>
   )

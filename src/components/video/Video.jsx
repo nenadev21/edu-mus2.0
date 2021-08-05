@@ -143,7 +143,7 @@ const format = (seconds) => {
 let count = 0;
 
 
-function Video({videoSize, vidHeight, isClosed, content, url, resourceName}) {
+function Video({videoSize, vidHeight, isOpen, content, url, resourceName}) {
   const classes = useStyles();
   // const [showControls, setShowControls] = useState(false);
   // const [count, setCount] = useState(0);
@@ -282,7 +282,7 @@ function Video({videoSize, vidHeight, isClosed, content, url, resourceName}) {
 
   return (
     <div className="accordion-context">
-      <Container className={`accordion-text ${isClosed}`} style={{margin: -16}}>
+      <Container className={'accordion-text'} style={{margin: -16}}>
         <div
           onMouseMove={handleMouseMove}
           onMouseLeave={hanldeMouseLeave}
@@ -296,7 +296,7 @@ function Video({videoSize, vidHeight, isClosed, content, url, resourceName}) {
             height={"100%"}
             url={url}
             pip={pip}
-            playing={playing && isClosed}
+            playing={playing && isOpen}
             controls={false}
             light={light}
             loop={loop}

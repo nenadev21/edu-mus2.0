@@ -1,5 +1,5 @@
 export const addLineBreaks = (str) => {
-  function flatMap(array, fn) {
+  const  flatMap = (array, fn) => {
   let result = [];
   for (let i = 0; i < array.length; i++) {
     let mapping = fn(array[i]);
@@ -7,8 +7,8 @@ export const addLineBreaks = (str) => {
   }
   return result;
   }
-  
-  const result = flatMap(str.split('\n'), function (part) {
+
+  const result = flatMap(str.split('\\n'), function (part) {
       return [part, <br/>];
     });
   
