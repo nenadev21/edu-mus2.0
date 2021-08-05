@@ -35,8 +35,6 @@ const handleSelection = (e) => {
   //how can I display correct units based on this filter?
 } 
 
-
-
   //this function maps over the array of levels. The index intends to assign an unique id to each element. This is using an "arrow function"
   const renderLevels = (levels) => {
     return levels.map((level, index) => {
