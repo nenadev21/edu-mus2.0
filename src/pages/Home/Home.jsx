@@ -8,7 +8,7 @@ import { LevelAndUnitContext } from '../../context/LevelAndUnitContext';
 
 export default function Home() {
     const { getAllLevels, getAllUnits, levels, units } = useContext(LevelAndUnitContext);
-    const [filteredUnits, setFilteredUnits] = useState(units)
+    const [currentLevel, setCurrentLevel] = useState(1)
 
     useEffect(() => {
       getAllLevels();
@@ -16,30 +16,17 @@ export default function Home() {
       // eslint-disable-next-line
   }, []);
 
-const filterUnits = (level) => {
-    let selectedUnits = units.filter((type) => type.level_id === level);
-    // console.log(selectedUnits)
-    setFilteredUnits(selectedUnits);
-}
-
 const renderUnits = (units) => {
+  let filteredUnits = units.filter((unit) => unit.level_id === currentLevel);
     return filteredUnits.map((unit, index) => {
       return <UnitCard unit={unit} key={index} />
     })
   } 
 
-const handleSelection = (e) => {
-  let selectedLevel = parseInt(e.target.value);
-  // console.log(selectedLevel)
-  filterUnits(selectedLevel)
-  //how can I display correct units based on this filter?
-} 
-
-  //this function maps over the array of levels. The index intends to assign an unique id to each element. This is using an "arrow function"
   const renderLevels = (levels) => {
     return levels.map((level, index) => {
       return (
-        <li value={level.id} key={index} onClick={handleSelection}>{level.level_name}</li>
+        <li key={index} onClick={() => setCurrentLevel(level.id)} >{level.level_name}</li>
       );
     });
     };
