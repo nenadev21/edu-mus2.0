@@ -36,10 +36,10 @@ export default function Navbar() {
           </NavLink>
           </div>
     <div className="navbar-end" style={{padding:'8px 12px'}}>
-      <NavLink className="navbar-item button is-primary" to="/sign-in">
+      <NavLink className="button is-primary" to="/sign-up">
         <strong>Regístrate </strong>
       </NavLink>
-      <NavLink className="navbar-item buttons button is-light" to="/sign-up" style={{margin:'0 0 0 12px'}}>
+      <NavLink className="button is-light" to="/sign-in" style={{margin:'0 0 0 12px'}}>
       Ingresa
       </NavLink>
     </div>
