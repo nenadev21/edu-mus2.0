@@ -4,11 +4,12 @@ import UnitCard from '../../components/cards/UnitCard';
 import HomeHeader from '../../components/headers/HomeHeader';
 
 import { LevelAndUnitContext } from '../../context/LevelAndUnitContext';
+import { SecurityRounded } from '@material-ui/icons';
 
 
 export default function Home() {
     const { getAllLevels, getAllUnits, levels, units } = useContext(LevelAndUnitContext);
-    const [currentLevel, setCurrentLevel] = useState(1)
+    const [currentLevel, setCurrentLevel] = useState(1);
 
     useEffect(() => {
       getAllLevels();
@@ -26,7 +27,7 @@ const renderUnits = (units) => {
   const renderLevels = (levels) => {
     return levels.map((level, index) => {
       return (
-        <li key={index} onClick={() => setCurrentLevel(level.id)} >{level.level_name}</li>
+        <li key={index} className='levelBtn' onClick={() => setCurrentLevel(level.id)} >{level.level_name}</li>
       );
     });
     };
