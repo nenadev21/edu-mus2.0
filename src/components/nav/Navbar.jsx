@@ -35,17 +35,13 @@ export default function Navbar() {
             Encuentra recursos
           </NavLink>
           </div>
-    <div className="navbar-end">
-      <div className="navbar-item">
-        <div className="buttons">
-          <a href="/sign-up" className="button is-primary">
-            <strong>Regístrate </strong>
-          </a>
-          <a href="/sign-in" className="button is-light">
-            Ingresa
-          </a>
-        </div>
-      </div>
+    <div className="navbar-end" style={{padding:'8px 12px'}}>
+      <NavLink className="navbar-item button is-primary" to="/sign-in">
+        <strong>Regístrate </strong>
+      </NavLink>
+      <NavLink className="navbar-item buttons button is-light" to="/sign-up" style={{margin:'0 0 0 12px'}}>
+      Ingresa
+      </NavLink>
     </div>
   </div>
 </nav>

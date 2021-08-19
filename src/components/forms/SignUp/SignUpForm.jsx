@@ -42,7 +42,7 @@ function SignUpForm() {
             </div>
             <div>
                 <div className="wrapper sign-in-wrapper">
-                    ¿Tienes una cuenta? <Link to="/" className="go-sign-in">Inicia sesión</Link>
+                    ¿Tienes una cuenta? <Link to="/sign-in" className="go-sign-in">Inicia sesión</Link>
                 </div>
             </div>
         </div>

@@ -1,8 +1,21 @@
-.Level ul {
+ul {
     margin-top: 50px;
     font-size: 18px;
 }
 
-.Level .is-2 { 
-    background-color: #FDFCFF;
+.levelBtn {
+    text-align: center;
+    border-radius: 15px;
+    border: 1px solid #00C4A7;
+    margin: 10px;
+    color: #00C4A7;
+    transition: 0.3s ease-out;
 }
+
+.levelBtn:hover {
+    background-color: #00C4A7;
+    color: #ffffff;
+    cursor: pointer;
+    transform: scale(1.1)
+}
+
