@@ -32,7 +32,7 @@ function SignInForm() {
             </div>
             <div>
                 <div className="wrapper">
-                    ¿No tienes una cuenta? <Link to="/" className="get-signed"> Regístrate </Link>
+                    ¿No tienes una cuenta? <Link to="/sign-up" className="get-signed"> Regístrate </Link>
                 </div>
             </div>
         </div>
