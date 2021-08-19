@@ -2,6 +2,7 @@
 .wrapper {
 margin-top: 30px;
 margin-left: 425px;
+align-items: center;
 flex-basis: auto;
 padding: 20px;
 border: 1px solid rgb(219,219,219);
