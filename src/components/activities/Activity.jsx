@@ -15,7 +15,7 @@ export default function Activity({ activity }) {
         <div className="accordion-section">
         <a className="panel-block" onClick={() => setIsOpen(!isOpen)}>
           <p className="accordion-title">
-            {`${activity_name} (${duration} minutes)`}
+            {`${activity_name} (${duration} minutos)`}
           </p>
           <FontAwesomeIcon
             className="accordion-icon"
