@@ -9,7 +9,7 @@ import { SecurityRounded } from '@material-ui/icons';
 
 export default function Home() {
     const { getAllLevels, getAllUnits, levels, units } = useContext(LevelAndUnitContext);
-    const [currentLevel, setCurrentLevel] = useState(1);
+    const [currentLevel, setCurrentLevel] = useState(3);
 
     useEffect(() => {
       getAllLevels();
@@ -22,12 +22,20 @@ const renderUnits = (units) => {
     return filteredUnits.map((unit, index) => {
       return <UnitCard unit={unit} key={index} />
     })
-  } 
+  }
 
   const renderLevels = (levels) => {
     return levels.map((level, index) => {
       return (
-        <li key={index} className='levelBtn' onClick={() => setCurrentLevel(level.id)} >{level.level_name}</li>
+        <li key={ index }
+          className='levelBtn'
+          onClick={ () => setCurrentLevel(level.id) }
+          style={ {
+            backgroundColor: level.id === currentLevel ? '#00C4A7' : '',
+            color: level.id === currentLevel ? 'white' : ''
+          } }>
+          { level.level_name }
+        </li>
       );
     });
     };
